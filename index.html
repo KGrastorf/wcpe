@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
+      <link rel="stylesheet" href="wcpe.min.css">
+      <link rel="stylesheet" href="style.css">
+    <title>CPE Requirements</title>
+  </head>
+  <body>
+
+    <div class="panel panel-default col-sm-9 state-card ">
+      <div class="panel-heading card delivery">
+        <h3 class="panel-title" id="state"></h3>
+      </div>
+      <div class="panel-body">
+        <div>
+
+        <span ><strong id="requirement">:</strong ></span><span id="date"></span><i class="fa" id="fa"></i><span id="provision"></span></div>
+        <button class="btn btn-primary board-button" type="button" name="button"><a href"" id="board"></a></button>
+      </div>
+    </div>
+
+
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script> -->
+    <script src="app.js">
+
+    </script>
+
+  </body>
+</html>
+
+
+@foreach (var state in states)
+{
+
+<div class="panel panel-default col-sm-9 state-card ">
+      <div class="panel-heading card delivery">
+        <h3 class="panel-title" id="state">@states.Name</h3>
+      </div>
+      <div class="panel-body">
+        <div>
+            <span ><strong id="requirement">@states.Requirement:</strong ></span>
+            <span id="date">@states.Date</span>
+            <i class="@states.Fa" id="fa"></i>
+            <span id="provision">@states.Provision</span>
+        </div>
+        <button class="btn btn-primary board-button" type="button" name="button"><a href"" id="board"></a></button>
+      </div>
+    </div>
+
+    }
+
+
+
+with the same object
+
+let states =[
+   {
+      state: "ALABAMA",
+      url: "http://www.asbpa.alabama.gov/",
+      board: "Alabama State Board of Public Accountancy",
+   }
+];
+
+let reqs = [
+  {
+  [ 'Alabama License Renewal Deadline:' ,' 9/31 ', 'fa-calendar' , ' annually'],
+  [ 'Alabama CPE Reporting Period:' ,' 10/1 to 9/30 ', 'fa-calendar' , ' annually'],
+  [ 'Alabama CPE Reporting Period:',' 40 Hours' , 'fa-calendar','']
+}
+]

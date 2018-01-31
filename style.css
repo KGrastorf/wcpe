@@ -1,0 +1,10 @@
+.board-button {
+  float: right;
+}
+ .state-card {
+   padding: 0;
+ }
+
+ #board {
+   color: white;
+ }

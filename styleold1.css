@@ -1,0 +1,49 @@
+.state {
+  display: flex;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.2vw;
+  background-color: #fff8eb;
+}
+
+.info {
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+button.btn.btn-default.board {
+  float: right;
+  margin-right: 1vw;
+  background-color: #edb352;
+  color: white;
+}
+
+button.btn.btn-default.board > a {
+  text-decoration: none;
+  color: white;
+  boder-radius: 0;
+}
+
+#reqs > button {
+  #reqs > button
+}
+
+ .name {
+   border-bottom: 1px solid black;
+ }
+
+#reqs{
+  width: 100%;
+  padding: 0 0 1vw;
+  border: 1px solid black;
+}
+
+ h3.name {
+   width:100%;
+   padding: 1vw;
+   margin-top: 0;
+ }
+
+.info, .board {
+  padding-left:  1vw;
+}

@@ -1,0 +1,62 @@
+<div class='container-fluid'>
+        <div class="row clearfix">
+            <div class="col-md-12 column">
+                <div >
+
+<h3><strong>Find out What Is Required to Remain Current</strong></h3>
+<p>Certified by multiple accreditation and professional organizations, Western CPE’s products are designed to help you meet requirements. We’re registered with the National Association of State Boards of Accountancy (NASBA) as a sponsor of continuing professional education on the National Registry of CPE Sponsors, a group which recognizes providers of CPE programs created in accordance with nationally-recognized standards shared by State Boards of Accountancy, NASBA and the AICPA.</p>
+<p>State Boards of Accountancy have final authority on the acceptance of individual courses for CPE credit. CPE requirements vary by state and other professional organizations, so it is vital to understand your unique set of requirements. Use the links below to determine what is required for you.</p>
+<div class="iMIS-WebPart">
+<div id="ste_container_ciProfessionalDesignations" class="ContentItemContainer">
+<div id="ctl01_TemplateBody_WebPartManager1_gwpciProfessionalDesignations_ciProfessionalDesignations_Panel_ProfessionalDesignations"></div>
+</div>
+</div>
+<div class="iMIS-WebPart">
+<div id="ste_container_ciNewContentHtml4" class="ContentItemContainer">
+<div id="ctl01_TemplateBody_WebPartManager1_gwpciNewContentHtml4_ciNewContentHtml4_Panel_NewContentHtml4"></div>
+</div>
+</div>
+<div class="search-wrapper" id="app">
+
+<input type="text" v-model="searchText" name="" value="">
+<label for="">Search State</label>
+<div class="panel-body state">
+<div class=""  id="reqs">
+  <h3 class="name" v-for="item in 1">{{parentMessage}}</h3>
+  <p class="info" v-for="item in items"><strong>{{item.requirement}}:</strong>{{item.date}}<i v-bind:class="item.fa">{{item.provision}}</i></p>
+<button class="btn btn-default board"><a :href="item.url | linkHandler" TARGET="_blank" v-for="item in items">{{item.board | uppercase}}</a>
+        </button>
+</div>
+</div>
+
+</div>
+<!-- <ul id="example-2">
+<li v-for="(item, index) in items">
+  {{ parentMessage }} - {{ index }} - {{ item.message }}
+</li>
+</ul> -->
+
+<div class="panel panel-default" id="state-parent">
+<div class="panel-heading">
+  <h3 class="panel-title" id="name"></h3>
+</div>
+<div class="panel-body">
+  <section class="reqs">
+    <span><strong id='requirement'> : </strong></span>
+    <span id="date"></span>
+    <i class="fa fa-calendar"></i>
+    <span id="provision"></span>
+    </section>
+    <button class="btn btn-default board" ><a href="#" TARGET="_blank" id="board"></a>
+    </button>
+
+</div>
+</div>
+
+<ul id="example-2">
+<li v-for="(item, index) in items">
+  {{ parentMessage }} - {{ index }} - {{ item.message }} - {{ item.tool }}
+</li>
+</ul>
+
+</div><!-- container -->
